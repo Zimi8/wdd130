@@ -1,0 +1,63 @@
+body{
+    font-family: Verdana, Tahoma, sans-serif;
+    line-height: 1.6;
+    background-color: rgba(255, 255, 250, 0.918);
+}
+
+header {
+    background: linear-gradient(to right, #054605, #98FB98);;
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    font-size:  1.5rem;
+}
+
+main {
+    width: 400px;
+    margin: 0 auto;
+
+
+}
+h1 {
+    margin:  10px;
+    text-align: center;
+}
+
+h2 {
+    border-bottom: 1px solid #84bd9e;
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
+    box-shadow: 30px 20px 30px rgba(68, 67, 67, 0.333);
+    border-radius: 10%;
+    
+}
+
+section {
+    margin: 20px 0;
+    border: 1px solid #036830;
+    color: beige;
+    padding: 10px;
+    background: linear-gradient(to right, #055c05, #0b750b);
+    border-radius: 8%;
+    font-size: .9rem;
+
+}
+
+
+
+footer{
+    background: linear-gradient(to right, #054605, #98FB98);
+    color: #fff;
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+    font-size:  1.5rem;
+
+}
+
+/* I just added a border radius on the temple, and an ID to put more temple imgs and reuse the same style*/
