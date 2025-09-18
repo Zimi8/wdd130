@@ -1,0 +1,40 @@
+main {
+    width: 55%;
+    float: left;
+    margin: 1rem;
+}
+
+aside {
+    width: 35%;
+    float: right;
+    margin: 1rem;
+}
+
+aside h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+aside img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+    box-shadow: 30px 20px 30px rgba(68, 67, 67, 0.333);
+    border-radius: 10%;
+    padding: 2px;
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+footer {
+    clear: both; /* Muy importante para que el footer no se suba */
+    margin-top: 1rem;
+    border-top: 1px solid #000;
+    text-align: center;
+    background-color: #519dff;
+}
