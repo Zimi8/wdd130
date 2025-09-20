@@ -1,0 +1,115 @@
+/* universal selector to zero out default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* define custom properties (variables) */
+:root {
+    --primary-color: #055a05; /* forest green */
+    --secondary-color: #f4a261; /* warm sand */
+    --accent1-color: #264653; /* dark slate blue */
+    --accent2-color: #e9c46a; /* light golden yellow */
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* body styles */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+.logo{
+    box-shadow: 2px 2px 2px 2px var(--accent2-color);
+    border: #e9c46a;
+}
+
+header nav ul {
+    list-style: none; /* Elimina las viñetas */
+    display: flex; /* Muestra los elementos en fila */
+    justify-content: space-around; /* Distribuye el espacio entre los enlaces */
+}
+
+header nav a {
+    color: var(--secondary-color); /* Aplica el color amarillo */
+    font-size: 20px;
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    padding: 10px;
+}
+
+
+/* center and limit the width of main sections */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+  background: #055a05;
+  color: var(--accent2-color);
+}
+
+/* hero div container */
+.hero {
+  position: relative; /* This makes the hero div a reference point for its children */
+}
+
+/* hero image */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* hero heading overlay */
+.hero h1 {
+  position: absolute;
+  top: 0; /* Posicionamiento en la parte superior */
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  /* Transparencia a través de rgba() */
+  background-color: rgba(38, 70, 83, 0.7); /* Usando var(--accent1-color) con transparencia */
+  color: #fff;
+  font-family: var(--heading-font);
+}
+
+/* hero article overlay */
+.hero article {
+    position: absolute;
+    bottom: 50px; /* Adjust as needed */
+    right: 50px; /* Adjust as needed */
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    opacity: 0.9;
+    color: var(--primary-color);
+}
+
+/* hero article image */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+
+/* general heading styles */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* consistent margin and padding for elements */
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* social media icon links */
+.socialmedia a {
+    text-decoration: none;
+    color: #f4a261;
+}
+
+
