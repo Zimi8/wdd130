@@ -9,26 +9,57 @@ body {
     font-family: montserrat, arial, sans-serif;
 }
 
+/* Updated nav to meet flexbox instructions */
 nav {
-    background-color: #519dff;
-    padding: 10px;
+    background-color: darkslategrey;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+/* Updated nav a with padding and text decoration as per instructions */
 nav a {
-    color: white;
-    padding: 10px;
     display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: gainsboro;
 }
-main{
-    max-width: 650px;
+
+/* New combined rule for max-width and centering */
+header, footer, .grid {
+    max-width: 840px;
     margin: 0 auto;
 }
 
-aside{
-    width: 45%;
-    margin: auto; 
+/* Removed redundant main selector as it is now part of the .grid styling */
+main {
+    grid-column: 2/3;
+    margin: 1rem;
 }
 
-aside img{
+/* Added bottom border to h1 */
+h1 {
+    border-bottom: 2px solid #ffc9c9;
+}
+
+/* Updated aside to meet grid instructions */
+aside {
+    width: 30rem;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+/* Updated main and aside to use grid display as per instructions */
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+aside img {
     width: 400px;
     height: auto;
 }
@@ -38,7 +69,7 @@ aside h2 {
     text-align: center;
 }
 
-main img{
+main img {
     width: 150px;
     height: auto;
     box-shadow: 30px 20px 30px rgba(68, 67, 67, 0.333);
@@ -46,39 +77,51 @@ main img{
     padding: 2px;
     float: right;
     margin: 0 0 1rem 1rem;
-
 }
 
 p {
-    margin:  1rem;
+    margin: 1rem;
 }
 
-footer{
+footer {
     margin-top: 1rem;
     border-top: 1px;
     text-align: center;
-    background-color: #519dff;
+    background-color: gainsboro;
+    border-bottom: 10px solid darkslategrey; 
 }
 
-/* class selector from the video */
 
 .box {
-/* 
-    border: 1px solid rgba(68, 67, 67, 0.333);
-    padding: 1rem;
-    background-color: #eadeff;
-    color: #210055; 
-    */
     margin: 1rem;
     border: 1px solid #eadeff;
     padding: 4rem;
-    background: linear-gradient(to right, #63dbff, #ffc9c9);
-    color:#210055;
+    text-decoration: none;
+    background: darkslategrey ;
+    color: gainsboro;
     border-radius: 5%;
     box-shadow: 30px 20px 30px rgba(68, 67, 67, 0.333);
 }
 
+a{
+    text-decoration: none;
+    color: gainsboro;
+}
 
 .indent {
     padding-left: 2rem;
 }
+
+
+/*
+header, .grid, footer {
+    display: grid;
+    grid-area: 10%/70%;
+    /*grid-template-columns: 100px 1fr;
+    display: grid;
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    
+
+} 
