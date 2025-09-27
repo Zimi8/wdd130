@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 
@@ -12,6 +13,7 @@
     --accent2-color: #f2f2f2; 
     --heading-font: montserrat, arial, sans-serif;;
     --body-font: montserrat, arial, sans-serif;;
+    background: #02220e;
 }
 
 body {
