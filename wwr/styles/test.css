@@ -1,71 +1,71 @@
-/*global*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*root*/
+
 :root {
-    --primary-color: #154315; 
-    --secondary-color: #aaa80f; 
-    --accent1-color: #54afd3; 
-    --accent2-color: #b4a379; 
-    --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
+    --primary-color: #679436; 
+    --secondary-color: #05668d;
+    --accent1-color: #005c0b; 
+    --accent2-color: #a5be00; 
+    --heading-font: montserrat, arial, sans-serif;;
+    --body-font: montserrat, arial, sans-serif;;
 }
 
-header {
-    background-color: var(--primary-color);
-}
-/* nav*/
-header nav a {
-    color: var(--secondary-color);
-    font-size: 40px;
-}
-
-header, main, footer{
-    width: 600px;
-    margin: 0 auto;
-
-}
-
-/*body*/
-body{
+body {
     font-family: var(--body-font);
     color: var(--accent1-color);
-    
-}
-/*main */
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color)
+    font-size: 16px;
 }
 
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
+.logo{
+    box-shadow: 2px 2px 2px 2px var(--accent2-color);
+    border: #e9c46a;
+    padding: 10px;
 }
 
+/* --- GRID FOR MAIN SECTIONS --- */
 
+header, main, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #055a05;
+    color: var(--accent2-color);
+    padding: 0 16px;
+    width: 100%;
+}
 
-/* hero | hero img*/
+/* --- HEADER GRID --- */
+.main-header {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    align-items: center;
+    padding: 10px 16px;
+}
 
+header nav ul {
+    list-style: none; 
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 1.5rem;
+}
+
+header nav a {
+    color: var(--secondary-color); 
+    font-size: 20px;
+    text-decoration: none; 
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: gainsboro;
+}
+
+/* --- HERO SECTION STYLES --- */
 .hero {
-    position: relative;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.hero article {
-    position: absolute;
-    bottom: 20px; 
-    right: 20px;
+  position: relative; 
+  margin: 16px 0;
 }
 
 .hero img {
@@ -74,36 +74,126 @@ nav, p, section, article {
     height: auto;
 }
 
-h1 {
+.hero-title {
     position: absolute;
-    top: 20px;
+    top: 0; 
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: antiquewhite;
+    background-color: rgba(38, 70, 83, 0.7); 
+    color: #fff;
+    font-family: var(--heading-font);
 }
 
-article {
+.hero-article {
     position: absolute;
-    background: #154315;
+    bottom: 50px; 
+    right: 50px; 
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    opacity: 0.9;
+    color: var(--primary-color);
 }
 
-.hero article img {
+.hero-article img {
     float: right;
     width: 125px;
+    margin-left: 10px;
+    border-radius: 8px;
 }
 
-/**h1  title rafting
-*/
+
+/* --- HISTORY SECTION GRID --- */
+.history-section {
+    margin: 32px 0;
+    text-align: center;
+}
+
+.history-section h2 {
+    margin-bottom: 20px;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 16px;
+    text-align: left;
+}
+
+.history-text-1 {
+    grid-column: 1 / 2;
+}
+
+.history-image {
+    grid-column: 2 / 3;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.history-text-2 {
+    grid-column: 3 / 4;
+}
+
+/* --- ADVENTURE SECTION GRID (CARROUSEL PLACEHOLDER) --- */
+.adventure-section {
+    margin: 32px 0;
+    text-align: center;
+}
+
+.adventure-section h2 {
+    margin-bottom: 20px;
+}
+
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 0 16px;
+}
+
+.adventure-item {
+    text-align: center;
+}
+
+.adventure-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
 
+/* --- FOOTER STYLES --- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px;
+    margin-top: 50px;
+    font-size: 1.1rem;
+}
 
-
-/* foooter */
+.socialmedia {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
 
 .socialmedia a {
     text-decoration: none;
+    color: var(--accent2-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
 }
 
+.socialmedia a img {
+    width: 40px;
+    height: 40px;
+}

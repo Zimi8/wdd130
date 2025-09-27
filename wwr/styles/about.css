@@ -1,115 +1,204 @@
-/* universal selector to zero out default browser styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* define custom properties (variables) */
+
 :root {
-    --primary-color: #055a05; /* forest green */
-    --secondary-color: #f4a261; /* warm sand */
-    --accent1-color: #264653; /* dark slate blue */
-    --accent2-color: #e9c46a; /* light golden yellow */
-    --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
+    --primary-color: #005c0b; /* Verde oscuro (Tu color de contraste principal) */
+    --secondary-color: #f2f2f2; /* Gris claro/Blanco roto (Tu otro color de contraste principal) */
+    --accent1-color: #005c0b; 
+    --accent2-color: #f2f2f2; 
+    --heading-font: montserrat, arial, sans-serif;;
+    --body-font: montserrat, arial, sans-serif;;
 }
 
-/* body styles */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    font-size: 16px;
 }
+
 .logo{
     box-shadow: 2px 2px 2px 2px var(--accent2-color);
     border: #e9c46a;
-}
-
-header nav ul {
-    list-style: none; /* Elimina las viñetas */
-    display: flex; /* Muestra los elementos en fila */
-    justify-content: space-around; /* Distribuye el espacio entre los enlaces */
-}
-
-header nav a {
-    color: var(--secondary-color); /* Aplica el color amarillo */
-    font-size: 20px;
-    text-decoration: none; /* Elimina el subrayado por defecto */
     padding: 10px;
 }
 
+/* --- GRID FOR MAIN SECTIONS --- */
 
-/* center and limit the width of main sections */
 header, main, footer {
-  width: 840px;
-  margin: 0 auto;
-  background: #055a05;
-  color: var(--accent2-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #055a05;
+    color: var(--accent2-color);
+    padding: 0 16px;
+    width: 100%;
 }
 
-/* hero div container */
+/* --- HEADER GRID --- */
+.main-header {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    align-items: center;
+    padding: 10px 16px;
+}
+
+header nav ul {
+    list-style: none; 
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 1.5rem;
+}
+
+header nav a {
+    color: var(--secondary-color); 
+    font-size: 20px;
+    text-decoration: none; 
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: gainsboro;
+}
+
+/* --- HERO SECTION STYLES --- */
 .hero {
-  position: relative; /* This makes the hero div a reference point for its children */
+  position: relative; 
+  margin: 16px 0;
 }
 
-/* hero image */
 .hero img {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-/* hero heading overlay */
-.hero h1 {
-  position: absolute;
-  top: 0; /* Posicionamiento en la parte superior */
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  /* Transparencia a través de rgba() */
-  background-color: rgba(38, 70, 83, 0.7); /* Usando var(--accent1-color) con transparencia */
-  color: #fff;
-  font-family: var(--heading-font);
-}
-
-/* hero article overlay */
-.hero article {
+.hero-title {
     position: absolute;
-    bottom: 50px; /* Adjust as needed */
-    right: 50px; /* Adjust as needed */
+    top: 0; 
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(38, 70, 83, 0.7); 
+    color: #fff;
+    font-family: var(--heading-font);
+}
+
+.hero-article {
+    position: absolute;
+    bottom: 50px; 
+    right: 50px; 
     background-color: #fff;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 50%;
     opacity: 0.9;
-    color: var(--primary-color);
+    color: var(--accent2-color);
 }
 
-/* hero article image */
-.hero article img {
+.hero-article img {
     float: right;
     width: 125px;
     margin-left: 10px;
     border-radius: 8px;
 }
 
-/* general heading styles */
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
+
+/* --- HISTORY SECTION GRID --- */
+.history-section {
+    margin: 32px 0;
+    text-align: center;
 }
 
-/* consistent margin and padding for elements */
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
+.history-section h2 {
+    margin-bottom: 20px;
 }
 
-/* social media icon links */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 16px;
+    text-align: left;
+}
+
+.history-text-1 {
+    grid-column: 1 / 2;
+}
+
+.history-image {
+    grid-column: 2 / 3;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.history-text-2 {
+    grid-column: 3 / 4;
+}
+
+/* --- ADVENTURE SECTION GRID (CARROUSEL PLACEHOLDER) --- */
+.adventure-section {
+    margin: 32px 0;
+    text-align: center;
+}
+
+.adventure-section h2 {
+    margin-bottom: 20px;
+}
+
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 0 16px;
+}
+
+.adventure-item {
+    text-align: center;
+}
+
+.adventure-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* --- FOOTER STYLES --- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 20px 16px;
+    margin-top: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    align-items: center;
+}
+
 .socialmedia a {
     text-decoration: none;
-    color: #f4a261;
+    color: var(--accent2-color);
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
 }
 
+.socialmedia a img {
+    width: 40px;
+    height: 40px;
+}
 
