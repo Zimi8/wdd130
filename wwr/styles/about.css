@@ -67,6 +67,10 @@ header nav a {
   position: relative; 
   margin: 16px 0;
 }
+h1{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
 
 .hero img {
     display: block;
