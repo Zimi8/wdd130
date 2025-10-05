@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact page for White Water Rafting, providing company address, contact information, and a contact form.">
+    <meta name="author" content="Ezequiel Jimenez">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Contact Us - White Water Rafting</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <img class="logo" src="images/header_logo.png" alt="RAFTING LOGO">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="company-heading">
+            <h1>Contact us! </h1>
+            <h2>White Water Rafting</h2>
+            <div class="company-details">
+                <p><strong>Address:</strong> Av. Corrientes 1234, C1043 CABA, Argentina</p>
+                <p><strong>Phone:</strong> +54 9 11 1111 8888</p>
+                <p><strong>Email:</strong> info@whitewaterrafting.com</p>
+            </div>
+        </div>
+
+        <div class="contact-grid">
+            <section class="map-section">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016709322312!2d-58.3841453!3d-34.603722999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac3b8273295%3A0xbf20b2d53513a2ad!2sAv.%20Corrientes%201234%2C%20C1043%20CABA%2C%20Argentina!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus"
+                    width="600" height="450" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <section class="form-section">
+                <form action="thankyou.html" method="post">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="user_name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="user_email" required>
+
+                    <fieldset>
+                        <legend>Purpose of your message:</legend>
+                        <div class="radio-group">
+                            <div>
+                                <input type="radio" id="inquiry" name="purpose" value="general_inquiry" checked>
+                                <label for="inquiry">General Inquiry</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="reservation" name="purpose" value="reservation_question">
+                                <label for="reservation">Reservation Question</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="suggestion" name="purpose" value="website_suggestion">
+                                <label for="suggestion">Website Suggestion</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="user_message" rows="5" required></textarea>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                        <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </div>
+
+        <section class="employee-section">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-grid">
+                <figure>
+                    <img src="images/lara.jpg" alt="Employee lara with a lifejacket">
+                    <figcaption>Lara - Gold medal winner and guide </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/jairo.jpg" alt="Employee Jairo over a boat">
+                    <figcaption>Jairo - Planning expert</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/nico.jpg" alt="Employee Nico, with a rowing">
+                    <figcaption>Nico - Equipment Specialist</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - White Water Rafting - Argentina </p>
+        <nav class="socialmedia">
+            <a href="https://linkedin.com">
+                <img src="images/linkedin_logo.png" alt="LinkedIn Icon"  width="20">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/iglogo.png" alt="Instagram Icon" width="20">
+            </a>
+            <a href="https://facebook.com">
+                <img src="images/fb_logo.png" alt="Facebook Icon" width="20">
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
