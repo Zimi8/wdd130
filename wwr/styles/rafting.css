@@ -24,9 +24,8 @@ body {
 }
 
 .logo{
-    box-shadow: 2px 2px 2px 2px var(--accent2-color);
     border: #e9c46a;
-    padding: 10px;
+    border-radius: 3.5px;
 }
 
 /* --- GRID FOR MAIN SECTIONS --- */
