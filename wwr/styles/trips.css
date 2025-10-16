@@ -7,13 +7,13 @@
 
 
 :root {
-    --primary-color: #055a05; /* Verde oscuro basado en la imagen */
-    --secondary-color: #f2f2f2; /* Gris claro/Blanco roto */
-    --accent1-color: #f2c45e; /* Dorado/Amarillo para acentos */ 
+    --primary-color: #055a05; 
+    --secondary-color: #f2f2f2; 
+    --accent1-color: #f2c45e; 
     --accent2-color: #f2f2f2; 
     --heading-font: 'Montserrat', arial, sans-serif;
     --body-font: 'Montserrat', arial, sans-serif;
-    background: #000; /* Fondo del body negro o muy oscuro para que resalte el contenido */
+    background: #000; 
 }
 
 body {
@@ -30,18 +30,18 @@ body {
 }
 
 
-/* El contenedor principal (header, main, footer) limita el ancho del contenido */
+
 header, main, footer {
     max-width: 1200px;
     margin: 0 auto;
-    background: var(--primary-color); /* Usamos el color primario para Header/Footer */
+    background: var(--primary-color); 
     color: var(--accent2-color);
     padding: 0 16px;
     width: 100%;
 }
 main {
-    background-color: var(--secondary-color); /* El main debe tener el fondo claro para el contenido */
-    color: #333; /* Color de texto oscuro para el main */
+    background-color: var(--secondary-color); 
+    color: #333; 
     padding: 16px;
 }
 
@@ -150,7 +150,7 @@ header nav a:hover {
     transform: translateY(-2px);
 }
 
-/*News!*/
+/*Newsletters!*/
 .newsletter-section {
     background-color: #eee;
     padding: 40px 16px;
@@ -259,17 +259,16 @@ header nav a:hover {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* La tarjeta grande que toma 2 columnas y 2 filas */
+
 .trip-card-large {
-    grid-column: span 2; /* Ocupa 2 de las 4 columnas */
-    grid-row: span 3; /* Ocupa 3 de las filas para que sea más alto */
+    grid-column: span 2; 
+    grid-row: span 3; 
 }
 
-/* Ajuste de las tarjetas pequeñas para que se alineen bien con la grande */
+
 .featured-trips-grid figure:nth-child(2),
 .featured-trips-grid figure:nth-child(3) {
-    grid-column: span 1; /* Ocupa 1 columna */
-    grid-row: span 1; /* Ocupa 1 fila */
+    grid-column: span 1; 
 }
 
 .featured-trips-grid figure:nth-child(4),
@@ -280,31 +279,28 @@ header nav a:hover {
 }
 
 
-/* ---------------------------------------------------------------------- */
-/* --- ESTILOS ESPECÍFICOS PARA LA PÁGINA DE VIAJES (TRIPS) --- */
-/* ---------------------------------------------------------------------- */
 
-/* Contenedor de ancho completo para el Hero de TRIPS */
+
 .full-width-hero-container {
-    width: 100vw; /* Ocupa el 100% del ancho del viewport */
+    width: 100vw; 
     position: relative;
-    left: 50%; /* Desplaza 50% hacia la derecha */
+    left: 50%; 
     right: 50%; 
-    margin-left: -50vw; /* Compensa la posición izquierda para centrarlo y que ocupe todo el ancho */
+    margin-left: -50vw; 
     margin-right: -50vw;
-    margin-bottom: 40px; /* Separación después del Hero */
+    margin-bottom: 40px; 
 }
 
-/* Estilos de Hero para Trips (un poco más alto que el Home) */
+
 .trips-hero-image {
     width: 100%;
-    height: 500px; /* Más alto para mayor impacto */
+    height: 500px; 
     object-fit: cover;
     display: block;
 }
 
 .trips-hero-message {
-    /* Reutiliza los estilos del mensaje de home para centrado y tipografía */
+    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -312,7 +308,7 @@ header nav a:hover {
     text-align: center;
     color: var(--secondary-color);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-    background-color: rgba(5, 90, 5, 0.7); /* Verde principal semi-transparente */
+    background-color: rgba(5, 90, 5, 0.7); 
     padding: 30px 60px;
     border-radius: 12px;
 }
@@ -323,23 +319,23 @@ header nav a:hover {
     margin: 0;
 }
 
-/* GRID para la sección principal de viajes */
+
 .trips-grid-container {
     display: grid;
-    /* Grid de 3 columnas para el contenido principal */
+
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 30px;
     margin-top: 30px;
 }
 
-/* Estilo para las tarjetas de viaje (Trip Cards) */
+
 .trip-card-detail {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     background-color: white;
     padding-bottom: 20px;
-    grid-column: span 1; /* Cada tarjeta ocupa 1 columna */
+    grid-column: span 1; 
     transition: transform 0.3s ease;
 }
 
@@ -368,15 +364,13 @@ header nav a:hover {
     line-height: 1.5;
 }
 
-/* ****************************************************** */
-/* --- NUEVOS ESTILOS PARA LA GALERÍA DE PAQUETES (IMAGEN) --- */
-/* ****************************************************** */
+
 .packages-gallery {
-    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    grid-column: 1 / -1; 
     margin: 50px 0;
     padding: 20px;
     text-align: center;
-    background-color: #f7f7f7; /* Fondo ligeramente diferente para destacar */
+    background-color: #f7f7f7; 
     border-radius: 12px;
 }
 
@@ -388,7 +382,7 @@ header nav a:hover {
 
 .packages-grid {
     display: grid;
-    /* 4 columnas en desktop */
+    
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 20px;
     justify-content: center;
@@ -398,7 +392,7 @@ header nav a:hover {
 .package-card {
     position: relative;
     overflow: hidden;
-    border-radius: 12px; /* Más redondeado */
+    border-radius: 12px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -421,7 +415,7 @@ header nav a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    /* Usamos el verde primario para el caption de fondo oscuro */
+
     background-color: var(--primary-color); 
     color: var(--secondary-color); 
     padding: 10px;
@@ -438,13 +432,13 @@ header nav a:hover {
     display: block;
     font-size: 0.8rem;
     font-weight: 300;
-    color: var(--accent1-color); /* Usamos el dorado para el precio */
+    color: var(--accent1-color); 
     margin-top: 5px;
 }
 /* ****************************************************** */
 
 
-/* Call to Action en la parte inferior de la página */
+
 .trips-cta {
     grid-column: 1 / -1;
     text-align: center;
